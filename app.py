@@ -3,7 +3,6 @@ import matplotlib as plt
 from matplotlib import pyplot as plt
 import pandas as pd
 import streamlit as st
-import seaborn as sns
 
 # Read the data file 
 Economic_df = pd.read_csv('Economic_activity_current_basic_prices_years_2002_2009 _million_dinars.csv')
@@ -76,8 +75,7 @@ if st.checkbox("إظهار ملخص عن قاعدة البيانات"):
 
 
 def bar_chart1():
-    #Creating the dataset
-   
+
     Year = Economic_df["Year"]
     values = Economic_df["number of population"]
 
@@ -100,8 +98,7 @@ if st.checkbox("إظهار العلاقة ما بين عدد السكان و ا�
 
 
 def bar_chart2():
-    #Creating the dataset
-   
+
     Year = Economic_df["Year"]
     Agriculture = Economic_df["Agriculture, hunting, forestry and fishing"]
     fig = plt.figure(figsize = (10, 5) )
